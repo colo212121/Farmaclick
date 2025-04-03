@@ -1,0 +1,32 @@
+
+<a class="btn btn-warning" href='@Url.Action("IndexConSessionFarmacia", "Home")'>Home</a>
+<a class="btn btn-warning" href='@Url.Action("Logout", "Account")'>Log Out</a>
+<a class="btn btn-warning" href='@Url.Action("DatosCuentaFarmacia", "Home")'>Datos Personales</a>
+<a class="btn btn-warning" href='@Url.Action("Stock", "Home")'>Tu Stock</a>
+<a class="btn btn-warning" href='@Url.Action("PedidosFarmacia", "Home")'>Tu Pedidos</a>
+<div class="row">
+        @if (ViewBag.Pedidos == null) 
+        {
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    No hay Pedidos realizados.
+                </div>
+            </div>
+        }
+        else
+        {
+            @foreach (var Pedido in ViewBag.Pedidos) 
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto: @Pedido.NombreProducto</h5>
+                            <h5 class="card-title">Paciente: @Pedido.NombrePaciente</h5>
+                            <h5 class="card-title">Direccion: @Pedido.Direccion</h5>
+                            <h5 class="card-text"><strong>Fecha:</strong> @Pedido.Fecha</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>

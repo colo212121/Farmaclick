@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Reiniciar márgenes, rellenos y establecer una tipografía predeterminada */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo de fondo con gradiente suave */
+body {
+    background: linear-gradient(to right, #e5eff6, #adc2e2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 14px; /* Tamaño base de fuente */
+    color: #333; /* Color de texto general */
+}
+
+/* Estilo del contenedor principal */
+.container {
+    background-color: #fff;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    padding: 20px; /* Añadir padding para mayor espacio */
+}
+
+/* Estilo de los párrafos */
+.container p {
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
+}
+
+/* Enlaces dentro del contenedor */
+.container a {
+    color: #1c3546;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.container a:hover {
+    color: #014f7d; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilo para botones */
+.container button {
+    background-color: #1c3546;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.container button:hover {
+    background-color: #4f6e8f;
+    transform: translateY(-3px); /* Sutil elevación al hacer hover */
+}
+
+.container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+/* Estilo del formulario */
+.container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+/* Estilo de los inputs */
+.container input {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.container input:focus {
+    border-color: #1c3546;
+}
+
+/* Animación de las secciones SignIn / SignUp */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in, .sign-up {
+    width: 50%;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+.container.active .sign-up {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Iconos sociales */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #1c3546;
+}
+
+/* Estilo para las tarjetas de producto */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Efecto de elevar la tarjeta */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos y textos dentro de la tarjeta */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Botones dentro de la tarjeta */
+.card-body .btn {
+    width: 48%;
+    margin: 5px 0;
+    font-size: 12px;
+    background-color: #1c3546;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-body .btn:hover {
+    background-color: #4f6e8f;
+    transform: translateY(-3px);
+}
+
+/* Diseño para el contenedor de productos */
+.container {
+    margin-top: 30px;
+}
+
+.col-md-4 {
+    padding: 10px; /* Espaciado más equilibrado entre las columnas */
+}
+
+/* Estilo para los botones principales de acción */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el mensaje cuando no hay productos */
+.alert-info {
+    font-size: 1.1rem;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+}
+
+/* Estilo para los botones de 'Agregar Producto' */
+.mt-4.text-center a {
+    margin-top: 20px;
+    color: #1c3546;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mt-4.text-center a:hover {
+    color: #014f7d;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.card-title {
+    color: #007bff; /* Color del título */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.search-container {
+    margin: 20px 0;
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 18rem;
+    margin: 10px;
+}

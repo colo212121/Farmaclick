@@ -1,1 +1,1 @@
-"# Farmaclick" 
+FarmaClick es una startup, la cual nació con la idea de hacer más ágil y sencilla la conexión entre médicos, farmacias y pacientes. En un mundo donde el tiempo es clave, buscamos eliminar barreras y optimizar procesos para que la salud esté al alcance de todos de manera rápida y eficiente. Con tecnología e innovación, facilitamos la comunicación y mejoramos la experiencia de quienes necesitan atención médica o acceso a medicamentos sin demoras innecesarias.

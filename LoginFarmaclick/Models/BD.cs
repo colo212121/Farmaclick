@@ -211,7 +211,8 @@ public static class BD
                 WHERE IdProducto = @pIdProducto";
 
             conn.Execute(sql, new 
-            { 
+            {   
+                pIdProducto = usu.IdProducto,
                 pNombre = usu.Nombre, 
                 pPrecio = usu.Precio, 
                 pStock = usu.Stock, 

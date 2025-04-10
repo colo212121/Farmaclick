@@ -96,7 +96,7 @@ public class HomeController : Controller
         BD.EliminarProducto(IdProducto);
         return RedirectToAction("Stock", "Home");
     }
-    public IActionResult EditarProducto()
+    public IActionResult EditarProducto(int IdProducto)
     {
         Farmacia usu = Farmacia.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
@@ -104,6 +104,7 @@ public class HomeController : Controller
             return RedirectToAction("Index","Home");
         }
         ViewBag.Farmacia = usu;
+        ViewBag.Producto = BD.BuscarProducto(IdProducto);
         return View();
     }
     public IActionResult Editar(Producto usu)

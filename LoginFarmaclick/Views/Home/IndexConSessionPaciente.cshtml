@@ -50,6 +50,7 @@
                         } else {
                             // Recorrer los productos y crear una card para cada uno
                             response.forEach((producto) => {
+                                console.log(producto)
                                 const productoCard = $(`
                                     <div class="card product-card">
                                         <div class="card-body">
@@ -57,7 +58,7 @@
                                             <p class="card-text"><strong>Precio:</strong> $${producto.precio}</p>
                                             <p class="card-text"><strong>Stock:</strong> ${producto.stock}</p>
                                             <p class="card-text"><strong>Descripción:</strong> ${producto.descripcion}</p>
-                                            <a class="btn btn-warning" href='@Url.Action("ComprarProducto", "Home")?id=${producto.id}'>Comprar</a>
+                                            <a class="btn btn-warning" href='@Url.Action("ComprarProducto", "Home")?IdProducto=${producto.idProducto}'>Comprar</a>
                                         </div>
                                     </div>
                                 `);

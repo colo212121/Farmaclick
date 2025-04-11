@@ -168,12 +168,15 @@ public class HomeController : Controller
         ViewBag.Farmacia = usu;
         return View();
     }
-    public IActionResult ComprarProducto(){
+    public IActionResult ComprarProducto(int IdProducto){
         Paciente usu = Paciente.FromString(HttpContext.Session.GetString("user"));
-        if (usu== null)
+        if (usu == null)
         {  
             return RedirectToAction("Index","Home");
         }
+        ViewBag.Paciente=usu;
+        ViewBag.Producto=BD.BuscarProducto(IdProducto);
+        ViewBag.Farmacia = BD.BuscarFarmacia(ViewBag.producto.IdFarmacia);
         return View();
     }
     public IActionResult Comprar(Producto prod, string Direccion){
@@ -182,7 +185,8 @@ public class HomeController : Controller
         {  
             return RedirectToAction("Index","Home");
         }
-        BD.AgregarPedido(prod, usu.IdPaciente, Direccion);
-        return View();
+        Farmacia farmacia = BD.BuscarFarmacia(prod.IdFarmacia);
+        BD.AgregarPedido(prod, usu, Direccion, farmacia);
+        return RedirectToAction("PedidosPaciente", "Home");
     }
 }

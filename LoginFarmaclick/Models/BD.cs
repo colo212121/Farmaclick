@@ -166,9 +166,9 @@ public static class BD
             // Consulta para obtener los productos relacionados con la IdProducto
             string sql = "SELECT * FROM Productos WHERE IdProducto = @pIdProducto";
             
-            Producto productos = conn.QuerySingleOrDefault<Producto>(sql, new { pIdProducto = IdProducto });
+            Producto producto = conn.QueryFirstOrDefault<Producto>(sql, new { pIdProducto = IdProducto });
 
-            return productos; // Devolvemos la lista de productos
+            return producto; // Devolvemos la lista de productos
         }
     }
     public static Farmacia BuscarFarmacia(int IdFarmacia)
@@ -294,20 +294,23 @@ public static class BD
             return Pedidos; // Devolvemos la lista de Pedidos
         }
     }
-    public static void AgregarPedido(Producto usu, int IdPaciente, string Direccion)
+    public static void AgregarPedido(Producto prod, Paciente usu, string Direccion, Farmacia farmacia)
     {
         using (SqlConnection conn = new SqlConnection(_ConnectionString))
         {
             conn.Open();
 
             // Si el Paciente no existe, registrar
-            string sql = "INSERT INTO Pedidos (IdProducto, IdFarmacia, Fecha, Direccion, IdPaciente) VALUES (@pIdProducto, @pIdFarmacia, @pFecha, @pDireccion, @pIdPaciente); SELECT CAST(scope_identity() AS int);";
+            string sql = "INSERT INTO Pedidos (IdProducto, IdFarmacia, Fecha, Direccion, IdPaciente, NombreProducto, NombreFarmacia, NombrePaciente) VALUES (@pIdProducto, @pIdFarmacia, @pFecha, @pDireccion, @pIdPaciente, @pNombreProducto, @pNombreFarmacia, @pNombrePaciente); SELECT CAST(scope_identity() AS int);";
             conn.Execute(sql, new { 
-                pIdProducto = usu.IdProducto, 
-                pIdFarmacia = usu.IdFarmacia, 
+                pIdProducto = prod.IdProducto, 
+                pIdFarmacia = farmacia.IdFarmacia, 
                 pFecha = DateTime.Now, 
                 pDireccion = Direccion, 
-                pIdPaciente = IdPaciente
+                pIdPaciente = usu.IdPaciente,
+                pNombreProducto = prod.Nombre,
+                pNombreFarmacia = farmacia.Nombre,
+                pNombrePaciente = usu.Nombre + " " + usu.Apellido
             });
         }
     }

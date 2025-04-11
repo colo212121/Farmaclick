@@ -31,3 +31,14 @@
             }
         }
     </div>
+    <div class="row justify-content-between">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a class="btn btn-primary" href='@Url.Action("PedidosPaciente", "Home", new { page = ViewBag.CurrentPage - 1 })'>Anterior</a>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a class="btn btn-primary" href='@Url.Action("PedidosPaciente", "Home", new { page = ViewBag.CurrentPage + 1 })'>Siguiente</a>
+        }
+    </div>

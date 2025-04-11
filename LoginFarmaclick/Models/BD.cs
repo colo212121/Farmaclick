@@ -312,6 +312,17 @@ public static class BD
                 pNombreFarmacia = farmacia.Nombre,
                 pNombrePaciente = usu.Nombre + " " + usu.Apellido
             });
+
+            sql = @"
+                UPDATE Productos
+                SET Stock = @pStock
+                WHERE IdProducto = @pIdProducto";
+
+            conn.Execute(sql, new 
+            {   
+                pIdProducto = prod.IdProducto,
+                pStock = prod.Stock - 1
+            });
         }
     }
 }

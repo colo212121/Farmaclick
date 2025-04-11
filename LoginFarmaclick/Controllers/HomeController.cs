@@ -135,7 +135,7 @@ public class HomeController : Controller
        return BD.Buscar(query);
         
     }
-    public IActionResult PedidosPaciente()
+    public IActionResult PedidosPaciente(int page = 1)
     {
         Paciente usu = Paciente.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
@@ -143,20 +143,42 @@ public class HomeController : Controller
             return RedirectToAction("Index","Home");
         }
         List<Pedido> Pedidos = BD.BuscarPedidos(usu.IdPaciente);
-        ViewBag.Pedidos = Pedidos;
         ViewBag.Paciente = usu;
+
+        const int pageSize = 4;
+
+        // Paginar los pedidos
+        var pedidosPaginados = Pedidos.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Pedidos = pedidosPaginados;
+
+        // Calcular el número total de páginas
+        var totalPages = (int)Math.Ceiling((double)Pedidos.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+        
         return View();
     }
-    public IActionResult PedidosFarmacia()
+    public IActionResult PedidosFarmacia(int page = 1)
     {
         Farmacia usu = Farmacia.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
         {  
             return RedirectToAction("Index","Home");
         }
-        List<Pedido> Pedidos = BD.BuscarPedidosFarmacia(usu.IdFarmacia);
-        ViewBag.Pedidos = Pedidos;
+        List<Pedido> Pedidos = BD.BuscarPedidos(usu.IdFarmacia);
         ViewBag.Farmacia = usu;
+
+        const int pageSize = 4;
+
+        // Paginar los pedidos
+        var pedidosPaginados = Pedidos.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Pedidos = pedidosPaginados;
+
+        // Calcular el número total de páginas
+        var totalPages = (int)Math.Ceiling((double)Pedidos.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+        
         return View();
     }
     public IActionResult NotificacionesFarmacia(){

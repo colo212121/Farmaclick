@@ -34,8 +34,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpblBhY2llbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/Farmaclick/LoginFarmaclick/Views/Account/OlvideContraseña.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPbHZpZGVDb250cmFzZcOxYS5jc2h0bWw=
+[z:/Farmaclick/LoginFarmaclick/Views/Account/OlvideContraseñaDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPbHZpZGVDb250cmFzZcOxYURvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/Farmaclick/LoginFarmaclick/Views/Account/OlvideContraseñaFarmacia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPbHZpZGVDb250cmFzZcOxYUZhcm1hY2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[z:/Farmaclick/LoginFarmaclick/Views/Account/OlvideContraseñaPaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPbHZpZGVDb250cmFzZcOxYVBhY2llbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [z:/Farmaclick/LoginFarmaclick/Views/Account/RegistrarseDoctor.cshtml]

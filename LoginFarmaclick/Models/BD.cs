@@ -325,4 +325,56 @@ public static class BD
             });
         }
     }
+    public static Paciente RecuperarContraseñaPaciente(string email, string dni)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "SELECT * FROM Pacientes WHERE Email = @pEmail AND DNI = @pDNI";
+            
+            var usuario = conn.QuerySingleOrDefault<Paciente>(sql, new { pEmail = email, pDNI = dni });
+
+            return usuario; // Devuelve el objeto Usuario si las credenciales son correctas
+        }
+    }
+    public static Doctor RecuperarContraseñaDoctor(string email, string matricula)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "SELECT * FROM Doctores WHERE Email = @pEmail AND Matricula = @pMatricula";
+            
+            var usuario = conn.QuerySingleOrDefault<Doctor>(sql, new { pEmail = email, pMatricula = matricula });
+
+            if (usuario == null)
+            {
+                throw new Exception("Email o contraseña incorrectos.");
+            }
+
+            return usuario; // Devuelve el objeto Usuario si las credenciales son correctas
+        }
+    }
+    public static Farmacia RecuperarContraseñaFarmacia(string email, string tituloPropiedad)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "SELECT * FROM Farmacias WHERE Email = @pEmail AND TituloPropiedad = @pTituloPropiedad";
+            
+            var usuario = conn.QuerySingleOrDefault<Farmacia>(sql, new { pEmail = email, pTituloPropiedad = tituloPropiedad });
+
+            if (usuario == null)
+            {
+                throw new Exception("Email o contraseña incorrectos.");
+            }
+
+            return usuario; // Devuelve el objeto Usuario si las credenciales son correctas
+        }
+    }
 }

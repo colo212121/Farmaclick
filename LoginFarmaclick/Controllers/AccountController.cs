@@ -101,9 +101,18 @@ public class AccountController : Controller
         return RedirectToAction("IndexConSessionFarmacia", "Home", usu);
     }
     
-    public IActionResult OlvideContraseña(string email, string DNI)
+    public IActionResult OlvideContraseñaPaciente(string email, string DNI)
     {
-        return View("Index", "Home");
+        return View("OlvideContraseñaPaciente", "Home");
+    }
+    public IActionResult OlvideContraseñaDoctor(string email, string Matricula)
+    {
+        return View("OlvideContraseñaDoctor", "Home");
+    }
+
+    public IActionResult OlvideContraseñaFarmacia(string email, string TituloPropiedad)
+    {
+        return View("OlvideContraseñaFarmacia", "Home");
     }
 
     public IActionResult Logout()

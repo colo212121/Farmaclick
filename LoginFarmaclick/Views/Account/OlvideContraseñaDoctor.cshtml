@@ -9,7 +9,8 @@
 <body>
     <div class="container mt-5">
         <h1>Olvide Contraseña Doctor</h1>
-        <form action='@Url.Action("OlvideContraseña", "Account")' method="post">
+        <h2>@ViewBag.Error</h2>
+        <form action='@Url.Action("DatosOlvidoDoctor", "Account")' method="post">
             <div class="form-group">
                 <label for="Matricula">Matricula</label>
                 <input type="password" class="form-control" id="Matricula" name="Matricula" required>

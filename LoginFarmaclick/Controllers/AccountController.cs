@@ -115,6 +115,51 @@ public class AccountController : Controller
         return View("OlvideContraseñaFarmacia", "Home");
     }
 
+    public IActionResult DatosOlvidoPaciente(string email, string DNI)
+    {
+        Paciente usu = BD.RecuperarContraseñaPaciente(email, DNI);
+        if (usu == null)
+        {
+            ViewBag.Error =  "Login Incorrecto";
+            return View("OlvideContraseñaPaciente");
+        }
+        else
+        {
+            HttpContext.Session.SetString("user", usu.ToString());
+            return RedirectToAction("IndexConSessionPaciente", "Home");
+        }
+    }
+
+    public IActionResult DatosOlvidoDoctor(string email, string matricula)
+    {
+        Doctor usu = BD.RecuperarContraseñaDoctor(email, matricula);
+        if (usu == null)
+        {
+            ViewBag.Error =  "Login Incorrecto";
+            return View("OlvideContraseñaDoctor");
+        }
+        else
+        {
+            HttpContext.Session.SetString("user", usu.ToString());
+            return RedirectToAction("IndexConSessionDoctor", "Home");
+        }
+    }
+
+    public IActionResult DatosOlvidoFarmacia(string email, string tituloPropiedad)
+    {
+        Farmacia usu = BD.RecuperarContraseñaFarmacia(email, tituloPropiedad);
+        if (usu == null)
+        {
+            ViewBag.Error =  "Login Incorrecto";
+            return View("OlvideContraseñaFarmacia");
+        }
+        else
+        {
+            HttpContext.Session.SetString("user", usu.ToString());
+            return RedirectToAction("IndexConSessionFarmacia", "Home");
+        }
+    }
+
     public IActionResult Logout()
     {
         HttpContext.Session.Remove("user");

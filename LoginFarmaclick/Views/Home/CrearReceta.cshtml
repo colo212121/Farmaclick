@@ -1,0 +1,51 @@
+<a class="btn btn-warning" href='@Url.Action("IndexConSessionDoctor", "Home")'>Home</a>
+<a class="btn btn-warning" href='@Url.Action("Logout", "Account")'>Log Out</a>
+<a class="btn btn-warning" href='@Url.Action("DatosCuentaDoctor", "Home")'>Datos Personales</a>
+<a class="btn btn-warning" href='@Url.Action("CrearReceta", "Home")'>Crea una Receta</a>
+<a class="btn btn-warning" href='@Url.Action("HistorialRecetasDoctor", "Home")'>Tus Recetas</a>
+
+<div class="container mt-5">
+    <h1>Agregar Receta</h1>
+    <form action='@Url.Action("GuardarReceta", "Home")' method="post">
+        <div class="form-group">
+            <label for="Nombre">Nombre Producto</label>
+            <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Contenido">Contenido</label>
+            <input type="text" class="form-control" id="Contenido" name="Contenido" required>
+        </div>
+
+        <div class="form-group">
+            <label for="NoEditable">Doctor</label>
+            <input type="text" class="form-control" id="NoEditable" name="NoEditable" value="@ViewBag.Doctor.Nombre" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="NoEditable">Fecha</label>
+            <input type="text" class="form-control" id="NoEditable" name="NoEditable" value="@ViewBag.Fecha" readonly>
+        </div>
+
+        <!-- ✅ Selector de paciente -->
+        <div class="form-group">
+            <label for="IdPaciente">Paciente</label>
+            <select class="form-control" id="IdPaciente" name="IdPaciente" required>
+                <option value="">-- Selecciona un paciente --</option>
+                @foreach (var paciente in ViewBag.Pacientes)
+                {
+                    <option value="@paciente.Nombre">@paciente.Nombre</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar Receta</button>
+    </form>
+</div>
+
+<!-- Scripts de Bootstrap / jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+

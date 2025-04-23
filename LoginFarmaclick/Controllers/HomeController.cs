@@ -211,4 +211,47 @@ public class HomeController : Controller
         BD.AgregarPedido(prod, usu, Direccion, farmacia);
         return RedirectToAction("PedidosPaciente", "Home");
     }
+
+    public IActionResult CrearReceta(Producto prod, string Direccion){
+        Doctor usu = Doctor.FromString(HttpContext.Session.GetString("user"));
+        if (usu== null)
+        {  
+            return RedirectToAction("Index","Home");
+        }
+        DateTime thisDay = DateTime.Today;
+        ViewBag.Fecha = thisDay;
+        ViewBag.Doctor = usu;
+        var pacientes = BD.BuscarPacientes(usu.IdDoctor);
+        ViewBag.pacientes = pacientes;
+        return View();
+    }
+    public IActionResult GuardarReceta(Receta usu)
+    {
+        Doctor doctor = Doctor.FromString(HttpContext.Session.GetString("user"));
+        BD.AgregarReceta(usu, doctor.IdDoctor);
+        return RedirectToAction("IndexConSessionDoctor");
+    }
+    public IActionResult HistorialRecetasDoctor(int page = 1)
+    {
+        Doctor usu = Doctor.FromString(HttpContext.Session.GetString("user"));
+        if (usu== null)
+        {  
+            return RedirectToAction("Index","Home");
+        }
+        List<Receta> Recetas = BD.BuscarRecetasPorDoctor(usu.IdDoctor);
+        ViewBag.Doctor = usu;
+
+        const int pageSize = 4;
+
+        // Paginar los recetas
+        var recetasPaginados = Recetas.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Recetas = recetasPaginados;
+
+        // Calcular el número total de páginas
+        var totalPages = (int)Math.Ceiling((double)Recetas.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+        
+        return View();
+    }
 }

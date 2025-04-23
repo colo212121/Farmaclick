@@ -377,4 +377,57 @@ public static class BD
             return usuario; // Devuelve el objeto Usuario si las credenciales son correctas
         }
     }
+    public static List<Paciente> BuscarPacientes(int IdDoctor)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Paso 1: Obtener los IdPaciente asociados al IdDoctor
+            string sqlIds = "SELECT IdPaciente FROM PacientesDoctor WHERE IdDoctor = @pIdDoctor";
+            var ids = conn.Query<int>(sqlIds, new { pIdDoctor = IdDoctor }).ToList();
+
+            // Verificamos si hay IDs antes de continuar
+            if (ids.Count == 0)
+                return new List<Paciente>();
+
+            // Paso 2: Obtener los pacientes reales de la tabla Paciente usando los IDs
+            string sqlPacientes = "SELECT * FROM Pacientes WHERE IdPaciente IN @Ids";
+            var pacientes = conn.Query<Paciente>(sqlPacientes, new { Ids = ids }).ToList();
+
+            return pacientes;
+        }
+    }
+    public static void AgregarReceta(Receta usu, int IdDoctor)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+            // Si el Paciente no existe, registrar
+            string sql = "INSERT INTO Productos (Imagen, IdPaciente, Contenido, Fecha, IdDoctor) VALUES (@pImagen, @pIdPaciente, @pContenido, @pFecha, @pIdDoctor); SELECT CAST(scope_identity() AS int);";
+            conn.Execute(sql, new { 
+                pImagen = usu.Imagen, 
+                pIdPaciente = usu.IdPaciente, 
+                pContenido = usu.Contenido, 
+                pFecha = usu.Fecha, 
+                pIdDoctor = IdDoctor
+            });
+        }
+    }
+    public static List<Receta> BuscarRecetasPorDoctor(int IdDoctor)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para obtener todas las recetas asociadas al IdDoctor
+            string sqlRecetas = "SELECT * FROM Recetas WHERE IdDoctor = @pIdDoctor";
+            
+            // Ejecutar la consulta y obtener las recetas directamente
+            List<Receta> recetas = conn.Query<Receta>(sqlRecetas, new { pIdDoctor = IdDoctor }).ToList();
+
+            return recetas;
+        }
+    }
+
 }

@@ -402,15 +402,16 @@ public static class BD
     {
         using (SqlConnection conn = new SqlConnection(_ConnectionString))
         {
+            
             conn.Open();
             // Si el Paciente no existe, registrar
-            string sql = "INSERT INTO Productos (Imagen, IdPaciente, Contenido, Fecha, IdDoctor) VALUES (@pImagen, @pIdPaciente, @pContenido, @pFecha, @pIdDoctor); SELECT CAST(scope_identity() AS int);";
+            string sql = "INSERT INTO Recetas (IdPaciente, Contenido, Fecha, IdDoctor, Producto) VALUES (@pIdPaciente, @pContenido, @pFecha, @pIdDoctor, @pProducto); SELECT CAST(scope_identity() AS int);";
             conn.Execute(sql, new { 
-                pImagen = usu.Imagen, 
                 pIdPaciente = usu.IdPaciente, 
                 pContenido = usu.Contenido, 
                 pFecha = usu.Fecha, 
-                pIdDoctor = IdDoctor
+                pIdDoctor = IdDoctor,
+                pProducto = usu.Producto
             });
         }
     }
@@ -430,4 +431,47 @@ public static class BD
         }
     }
 
+    public static List<Receta> BuscarRecetasPorPaciente(int IdPaciente)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para obtener todas las recetas asociadas al IdPaciente
+            string sqlRecetas = "SELECT * FROM Recetas WHERE IdPaciente = @pIdPaciente";
+            
+            // Ejecutar la consulta y obtener las recetas directamente
+            List<Receta> recetas = conn.Query<Receta>(sqlRecetas, new { pIdPaciente = IdPaciente }).ToList();
+
+            return recetas;
+        }
+    }
+
+    public static Paciente BuscarPacientePorId(int IdPaciente)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Paso 1: Obtener los IdPaciente asociados al IdDoctor
+            string sql = "SELECT * FROM Pacientes WHERE IdPaciente = @pIdPaciente";
+            var usuario = conn.QuerySingleOrDefault<Paciente>(sql, new { pIdPaciente = IdPaciente });
+
+            return usuario;
+        }
+    }
+
+    public static Doctor BuscarDoctorPorId(int IdDoctor)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Paso 1: Obtener los IdDoctor asociados al IdDoctor
+            string sql = "SELECT * FROM Doctores WHERE IdDoctor = @pIdDoctor";
+            var usuario = conn.QuerySingleOrDefault<Doctor>(sql, new { pIdDoctor = IdDoctor });
+
+            return usuario;
+        }
+    }
 }

@@ -1,9 +1,9 @@
 <div class="container">
-    <a class="btn btn-warning" href='@Url.Action("IndexConSessionDoctor", "Home")'>Home</a>
+    <a class="btn btn-warning" href='@Url.Action("IndexConSessionPaciente", "Home")'>Home</a>
     <a class="btn btn-warning" href='@Url.Action("Logout", "Account")'>Log Out</a>
-    <a class="btn btn-warning" href='@Url.Action("DatosCuentaDoctor", "Home")'>Datos Personales</a>
-    <a class="btn btn-warning" href='@Url.Action("CrearReceta", "Home")'>Crea una Receta</a>
-    <a class="btn btn-warning" href='@Url.Action("HistorialRecetasDoctor", "Home")'>Tus Recetas</a>
+    <a class="btn btn-warning" href='@Url.Action("DatosCuentaPaciente", "Home")'>Datos Personales</a>
+    <a class="btn btn-warning" href='@Url.Action("PedidosPaciente", "Home")'>Tus Pedidos</a>
+    <a class="btn btn-warning" href='@Url.Action("HistorialRecetasPaciente", "Home")'>Tus Recetas</a>
 
     <div class="row">
         @if (ViewBag.Recetas == null || !(ViewBag.Recetas as List<LoginFarmaclick.Models.Receta>).Any())
@@ -17,12 +17,12 @@
         else
         {
             var recetas = ViewBag.Recetas as List<LoginFarmaclick.Models.Receta>;
-            var pacientes = ViewBag.Pacientes as List<LoginFarmaclick.Models.Paciente>;
+            var doctores = ViewBag.doctores as List<LoginFarmaclick.Models.Doctor>;
 
             @for (int i = 0; i < recetas.Count; i++)
             {
                 var receta = recetas[i];
-                var paciente = pacientes[i];
+                var doctor = doctores[i];
                 
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
@@ -30,9 +30,9 @@
                             <h5 class="card-title">Producto: @receta.Producto</h5>
                             <h5 class="card-title">Contenido: @receta.Contenido</h5>
                             <h5 class="card-title">Fecha: @receta.Fecha</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Paciente: @paciente.Nombre @paciente.Apellido</h6>
-                            <p class="card-text"><strong>Email del paciente:</strong> @paciente.Email</p>
-                            <p class="card-text"><strong>Teléfono:</strong> @paciente.Telefono</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Doctor: @doctor.Nombre @doctor.Apellido</h6>
+                            <p class="card-text"><strong>Email del doctor:</strong> @doctor.Email</p>
+                            <p class="card-text"><strong>Teléfono:</strong> @doctor.Telefono</p>
                         </div>
                     </div>
                 </div>
@@ -44,12 +44,12 @@
     <div class="row justify-content-between">
         @if (ViewBag.CurrentPage > 1)
         {
-            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage - 1 })'>Anterior</a>
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasPaciente", "Home", new { page = ViewBag.CurrentPage - 1 })'>Anterior</a>
         }
 
         @if (ViewBag.CurrentPage < ViewBag.TotalPages)
         {
-            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage + 1 })'>Siguiente</a>
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasPaciente", "Home", new { page = ViewBag.CurrentPage + 1 })'>Siguiente</a>
         }
     </div>
 </div>

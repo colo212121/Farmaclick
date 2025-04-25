@@ -219,7 +219,7 @@ public class HomeController : Controller
             return RedirectToAction("Index","Home");
         }
         DateTime thisDay = DateTime.Today;
-        ViewBag.Fecha = thisDay;
+        ViewBag.Fecha = thisDay.ToString("yyyy-MM-dd");
         ViewBag.Doctor = usu;
         var pacientes = BD.BuscarPacientes(usu.IdDoctor);
         ViewBag.pacientes = pacientes;
@@ -234,16 +234,18 @@ public class HomeController : Controller
     public IActionResult HistorialRecetasDoctor(int page = 1)
     {
         Doctor usu = Doctor.FromString(HttpContext.Session.GetString("user"));
-        if (usu== null)
+        if (usu == null)
         {  
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
+
+        // Obtener las recetas correspondientes al doctor
         List<Receta> Recetas = BD.BuscarRecetasPorDoctor(usu.IdDoctor);
         ViewBag.Doctor = usu;
 
         const int pageSize = 4;
 
-        // Paginar los recetas
+        // Paginación de las recetas
         var recetasPaginados = Recetas.Skip((page - 1) * pageSize).Take(pageSize).ToList();
         ViewBag.Recetas = recetasPaginados;
 
@@ -251,7 +253,59 @@ public class HomeController : Controller
         var totalPages = (int)Math.Ceiling((double)Recetas.Count() / pageSize);
         ViewBag.TotalPages = totalPages;
         ViewBag.CurrentPage = page;
-        
+
+        // Crear una lista de pacientes para los cuales se buscarán sus datos
+        var pacientes = new List<Paciente>();
+
+        // Obtener el paciente correspondiente a cada receta paginada
+        foreach (var receta in recetasPaginados)
+        {
+            var paciente = BD.BuscarPacientePorId(receta.IdPaciente);
+            pacientes.Add(paciente); // Agregar el paciente a la lista
+        }
+
+        // Pasar la lista de pacientes a la vista
+        ViewBag.Pacientes = pacientes;
+
+        return View();
+    }
+
+    public IActionResult HistorialRecetasPaciente(int page = 1)
+    {
+        Paciente usu = Paciente.FromString(HttpContext.Session.GetString("user"));
+        if (usu == null)
+        {  
+            return RedirectToAction("Index", "Home");
+        }
+
+        // Obtener las recetas correspondientes al Paciente
+        List<Receta> Recetas = BD.BuscarRecetasPorPaciente(usu.IdPaciente);
+        ViewBag.Paciente = usu;
+
+        const int pageSize = 4;
+
+        // Paginación de las recetas
+        var recetasPaginados = Recetas.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Recetas = recetasPaginados;
+
+        // Calcular el número total de páginas
+        var totalPages = (int)Math.Ceiling((double)Recetas.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+
+        // Crear una lista de doctores para los cuales se buscarán sus datos
+        var doctores = new List<Doctor>();
+
+        // Obtener el doctor correspondiente a cada receta paginada
+        foreach (var receta in recetasPaginados)
+        {
+            var doctor = BD.BuscarDoctorPorId(receta.IdDoctor);
+            doctores.Add(doctor); // Agregar el doctor a la lista
+        }
+
+        // Pasar la lista de doctores a la vista
+        ViewBag.doctores = doctores;
+
         return View();
     }
 }

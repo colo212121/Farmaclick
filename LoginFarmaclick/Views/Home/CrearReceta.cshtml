@@ -9,7 +9,7 @@
     <form action='@Url.Action("GuardarReceta", "Home")' method="post">
         <div class="form-group">
             <label for="Nombre">Nombre Producto</label>
-            <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+            <input type="text" class="form-control" id="Producto" name="Producto" required>
         </div>
 
         <div class="form-group">
@@ -23,10 +23,9 @@
         </div>
 
         <div class="form-group">
-            <label for="NoEditable">Fecha</label>
-            <input type="text" class="form-control" id="NoEditable" name="NoEditable" value="@ViewBag.Fecha" readonly>
+            <label for="Fecha">Fecha</label>
+            <input type="text" class="form-control" id="Fecha" name="Fecha" value="@ViewBag.Fecha" readonly>
         </div>
-
         <!-- ✅ Selector de paciente -->
         <div class="form-group">
             <label for="IdPaciente">Paciente</label>
@@ -34,7 +33,7 @@
                 <option value="">-- Selecciona un paciente --</option>
                 @foreach (var paciente in ViewBag.Pacientes)
                 {
-                    <option value="@paciente.Nombre">@paciente.Nombre</option>
+                    <option value="@paciente.IdPaciente">@paciente.Nombre @paciente.Apellido</option>
                 }
             </select>
         </div>

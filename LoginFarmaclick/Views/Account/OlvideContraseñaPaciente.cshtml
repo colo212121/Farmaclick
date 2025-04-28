@@ -8,12 +8,16 @@
 </head>
 <body>
     <div class="container mt-5">
+        <div class= "Volver">
+        <a class="btn btn-warning" href='@Url.Action("LoginPaciente", "Account")'>Volver</a>
+        </div>
         <h1>Olvide Contraseña Paciente</h1>
         <h2>@ViewBag.Error</h2>
         <form action='@Url.Action("DatosOlvidoPaciente", "Account")' method="post">
             <div class="form-group">
                 <label for="DNI">DNI</label>
                 <input type="password" class="form-control" id="DNI" name="DNI" required>
+                </div>
             <div class="form-group">
                 <label for="Email">Email</label>
                 <input type="email" class="form-control" id="Email" name="Email" required>

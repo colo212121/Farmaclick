@@ -8,6 +8,10 @@
 </head>
 <body>
     <div class="container mt-5">
+        <div class= "Volver">
+        <a class="btn btn-warning" href='@Url.Action("index", "Home")'>Volver</a>
+        </div>
+        <img src="~/img/imago.png" class="logo">
         <h1>Registrarme</h1>
         <form action='@Url.Action("GuardarPaciente", "Account")' method="post" onsubmit="return validarFormulario()">
             <div class="form-group">

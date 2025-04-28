@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="~/css/loginPac.css" asp-append-version="true" />
 </head>
 <body>
+<img src="~/img/fondo.png" class="fondo">
     <div class="container mt-5">
+        <div class= "Volver">
+        <a class="btn btn-warning" href='@Url.Action("index", "Home")'>✖</a>
+        </div>
+        <img src="~/img/imago.png" class="logo">
         <h1>Iniciar sesion</h1>
         <h2>@ViewBag.Error</h2>
         <form action='@Url.Action("DatosLoginPaciente", "Account")' method="post">
             <div class="form-group">
-                <label for="Contraseña">Contraseña</label>
-                <input type="password" class="form-control" id="Contraseña" name="Contraseña" required>
+            <input type="email" class="form-control" id="Email" name="Email" placeholder = "Email" required>
+            </div>
             <div class="form-group">
-                <label for="Email">Email</label>
-                <input type="email" class="form-control" id="Email" name="Email" required>
+                <input type="password" class="form-control" id="Contraseña" name="Contraseña" placeholder="Contraseña" required>
             </div>
             <button type="submit" class="btn btn-primary">Iniciar</button>
         </form>
-    </div>
-    <!-- Forgot Password -->
-    <div class="forgot-password text-center">
+        <div class="forgot-password text-center">
         <a class="btn btn-warning" href='@Url.Action("OlvideContraseñaPaciente", "Account")'>¿Olvidaste tu contraseña?</a>
     </div>
+        <div class= "vaAlRegistro">
+    <a class="btn btn-warning" href='@Url.Action("RegistrarsePaciente", "Account")'>¿No tenes cuenta? Registrate</a>
+    </div>
+    </div>
+    <!-- Forgot Password -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

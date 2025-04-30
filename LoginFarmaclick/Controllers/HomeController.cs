@@ -181,16 +181,37 @@ public class HomeController : Controller
         
         return View();
     }
-    public IActionResult NotificacionesFarmacia(){
+    public IActionResult NotificacionesFarmacia(int page = 1){
         Farmacia usu = Farmacia.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
         {  
             return RedirectToAction("Index","Home");
         }
         ViewBag.Farmacia = usu;
+        List<NotificacionesFarmacia> Notificaciones = BD.BuscarNotificacionesPorFarmacia(usu.IdFarmacia);
+        ViewBag.Farmacia = usu;
+
+        const int pageSize = 4;
+
+        var notificacionespaginadas = Notificaciones.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Notificaciones = notificacionespaginadas;
+
+        var totalPages = (int)Math.Ceiling((double)Notificaciones.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+
+        var pacientes = new List<Paciente>();
+
+        foreach (var notificacion in notificacionespaginadas)
+        {
+            var paciente = BD.BuscarPacientePorId(notificacion.IdPaciente);
+            pacientes.Add(paciente); 
+        }
+
+        ViewBag.Pacientes = pacientes;
         return View();
     }
-    public IActionResult NotificacionesDoctor(){
+    public IActionResult NotificacionesDoctor(int page = 1){
         Doctor usu = Doctor.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
         {  
@@ -220,13 +241,34 @@ public class HomeController : Controller
         ViewBag.Pacientes = pacientes;
         return View();
     }
-    public IActionResult NotificacionesPaciente(){
+    public IActionResult NotificacionesPaciente(int page = 1){
         Paciente usu = Paciente.FromString(HttpContext.Session.GetString("user"));
         if (usu== null)
         {  
             return RedirectToAction("Index","Home");
         }
         ViewBag.Paciente = usu;
+        List<NotificacionesPaciente> Notificaciones = BD.BuscarNotificacionesPorPaciente(usu.IdPaciente);
+        ViewBag.Paciente = usu;
+
+        const int pageSize = 4;
+
+        var notificacionespaginadas = Notificaciones.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        ViewBag.Notificaciones = notificacionespaginadas;
+
+        var totalPages = (int)Math.Ceiling((double)Notificaciones.Count() / pageSize);
+        ViewBag.TotalPages = totalPages;
+        ViewBag.CurrentPage = page;
+
+        var doctores = new List<Doctor>();
+
+        foreach (var notificacion in notificacionespaginadas)
+        {
+            var doctor = BD.BuscarDoctorPorId(notificacion.IdDoctor);
+            doctores.Add(doctor); 
+        }
+
+        ViewBag.Doctores = doctores;
         return View();
     }
     public IActionResult ComprarProducto(int IdProducto){
@@ -346,5 +388,23 @@ public class HomeController : Controller
         ViewBag.doctores = doctores;
 
         return View();
+    }
+    public IActionResult EliminarNotificacionFarmacia(int IdNotificacion)
+    {
+        Farmacia farmacia = Farmacia.FromString(HttpContext.Session.GetString("user"));
+        BD.EliminarNotificacionFarmacia(IdNotificacion);
+        return RedirectToAction("NotificacionesFarmacia", "Home");
+    }
+    public IActionResult EliminarNotificacionDoctor(int IdNotificacion)
+    {
+        Doctor doctor = Doctor.FromString(HttpContext.Session.GetString("user"));
+        BD.EliminarNotificacionDoctor(IdNotificacion);
+        return RedirectToAction("NotificacionesDoctor", "Home");
+    }
+    public IActionResult EliminarNotificacionPaciente(int IdNotificacion)
+    {
+        Paciente paciente = Paciente.FromString(HttpContext.Session.GetString("user"));
+        BD.EliminarNotificacionPaciente(IdNotificacion);
+        return RedirectToAction("NotificacionesPaciente", "Home");
     }
 }

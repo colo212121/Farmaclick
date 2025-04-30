@@ -12,4 +12,50 @@
     <a class="btn btn-warning" href='@Url.Action("PedidosPaciente", "Home")'>Tus Pedidos</a>
     <a class="btn btn-warning" href='@Url.Action("HistorialRecetasPaciente", "Home")'>Tus Recetas</a>
 
+    <div class="row">
+        @if (ViewBag.Notificaciones == null || !(ViewBag.Notificaciones as List<LoginFarmaclick.Models.NotificacionesPaciente>).Any())
+        {
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    No hay Notificaciones almacenadas.
+                </div>
+            </div>
+        }
+        else
+        {
+            var notificaciones = ViewBag.Notificaciones as List<LoginFarmaclick.Models.NotificacionesPaciente>;
+            var doctores = ViewBag.Doctores as List<LoginFarmaclick.Models.Doctor>;
+
+            @for (int i = 0; i < notificaciones.Count; i++)
+            {
+                var notificacion = notificaciones[i];
+                var doctor = doctores[i];
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title">Doctor: @doctor.Nombre @doctor.Apellido</h6>
+                            <h5 class="card-subtitle mb-2 text-muted">Contenido: @notificacion.Contenido</h5>
+                            <div class="btn-group">
+                                <a class="btn btn-warning" href='@Url.Action("EliminarNotificacionDoctor", "Home", new {@notificacion.IdNotificacion})'>Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <!-- Paginación -->
+    <div class="row justify-content-between">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage - 1 })'>Anterior</a>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage + 1 })'>Siguiente</a>
+        }
+    </div>
 </div>

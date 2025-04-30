@@ -485,7 +485,7 @@ public static class BD
             string sqlNotificaciones = "SELECT * FROM NotificacionesDoctores WHERE IdDoctor = @pIdDoctor";
             
             // Ejecutar la consulta y obtener las notificaciones directamente
-            List<NotificacionesDoctor> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdDoctor = IdDoctor }).ToList();
+            List<NotificacionesDoctor> notificaciones = conn.Query<NotificacionesDoctor>(sqlNotificaciones, new { pIdDoctor = IdDoctor }).ToList();
 
             return notificaciones;
         }
@@ -501,7 +501,7 @@ public static class BD
             string sqlNotificaciones = "SELECT * FROM NotificacionesPacientes WHERE IdPaciente = @pIdPaciente";
             
             // Ejecutar la consulta y obtener las notificaciones directamente
-            List<NotificacionesPaciente> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdPaciente = IdPaciente }).ToList();
+            List<NotificacionesPaciente> notificaciones = conn.Query<NotificacionesPaciente>(sqlNotificaciones, new { pIdPaciente = IdPaciente }).ToList();
 
             return notificaciones;
         }
@@ -516,9 +516,48 @@ public static class BD
             string sqlNotificaciones = "SELECT * FROM NotificacionesFarmaciaes WHERE IdFarmacia = @pIdFarmacia";
             
             // Ejecutar la consulta y obtener las notificaciones directamente
-            List<NotificacionesFarmacia> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdFarmacia = IdFarmacia }).ToList();
+            List<NotificacionesFarmacia> notificaciones = conn.Query<NotificacionesFarmacia>(sqlNotificaciones, new { pIdFarmacia = IdFarmacia }).ToList();
 
             return notificaciones;
+        }
+    }
+    public static void EliminarNotificacionFarmacia(int IdNotificacion)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "DELETE FROM NotificacionesFarmacias WHERE IdNotificacion = @pIdNotificacion";
+            
+            var usuario = conn.QuerySingleOrDefault<Doctor>(sql, new { pIdNotificacion = IdNotificacion});
+
+        }
+    }
+    public static void EliminarNotificacionDoctor(int IdNotificacion)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "DELETE FROM NotificacionesDoctores WHERE IdNotificacion = @pIdNotificacion";
+            
+            var usuario = conn.QuerySingleOrDefault<Doctor>(sql, new { pIdNotificacion = IdNotificacion});
+
+        }
+    }
+    public static void EliminarNotificacionPaciente(int IdNotificacion)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para verificar el usuario
+            string sql = "DELETE FROM NotificacionPacientes WHERE IdNotificacion = @pIdNotificacion";
+            
+            var usuario = conn.QuerySingleOrDefault<Doctor>(sql, new { pIdNotificacion = IdNotificacion});
+
         }
     }
 }

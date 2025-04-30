@@ -1,14 +1,55 @@
-@{
-    ViewData["Title"] = "Notificaciones";
-}
-
-<div>
-    <h1>Notificaciones</h1>
-    <p>Estas en session como Doctor @ViewBag.Doctor.Nombre</p>
+<div class="container">
     <a class="btn btn-warning" href='@Url.Action("IndexConSessionDoctor", "Home")'>Home</a>
     <a class="btn btn-warning" href='@Url.Action("NotificacionesDoctor", "Home")'>Notificaciones</a>
     <a class="btn btn-warning" href='@Url.Action("Logout", "Account")'>Log Out</a>
     <a class="btn btn-warning" href='@Url.Action("DatosCuentaDoctor", "Home")'>Datos Personales</a>
     <a class="btn btn-warning" href='@Url.Action("CrearReceta", "Home")'>Crea una Receta</a>
     <a class="btn btn-warning" href='@Url.Action("HistorialRecetasDoctor", "Home")'>Tus Recetas</a>
+
+    <div class="row">
+        @if (ViewBag.Notificaciones == null || !(ViewBag.Notificaciones as List<LoginFarmaclick.Models.NotificacionesDoctor>).Any())
+        {
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    No hay Notificaciones almacenadas.
+                </div>
+            </div>
+        }
+        else
+        {
+            var notificaciones = ViewBag.Notificaciones as List<LoginFarmaclick.Models.NotificacionesDoctor>;
+            var pacientes = ViewBag.Pacientes as List<LoginFarmaclick.Models.Paciente>;
+
+            @for (int i = 0; i < notificaciones.Count; i++)
+            {
+                var notificacion = notificaciones[i];
+                var paciente = pacientes[i];
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title">Paciente: @paciente.Nombre @paciente.Apellido</h6>
+                            <h5 class="card-subtitle mb-2 text-muted">Contenido: @notificacion.Contenido</h5>
+                            <div class="btn-group">
+                                <a class="btn btn-warning" href='@Url.Action("EliminarNotificacionDoctor", "Home", new {@notificacion.IdNotificacion})'>Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <!-- Paginación -->
+    <div class="row justify-content-between">
+        @if (ViewBag.CurrentPage > 1)
+        {
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage - 1 })'>Anterior</a>
+        }
+
+        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+        {
+            <a class="btn btn-primary" href='@Url.Action("HistorialRecetasDoctor", "Home", new { page = ViewBag.CurrentPage + 1 })'>Siguiente</a>
+        }
+    </div>
 </div>

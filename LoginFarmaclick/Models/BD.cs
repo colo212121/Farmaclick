@@ -474,4 +474,51 @@ public static class BD
             return usuario;
         }
     }
+
+    public static List<NotificacionesDoctor> BuscarNotificacionesPorDoctor(int IdDoctor)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para obtener todas las notificaciones asociadas al IdDoctor
+            string sqlNotificaciones = "SELECT * FROM NotificacionesDoctores WHERE IdDoctor = @pIdDoctor";
+            
+            // Ejecutar la consulta y obtener las notificaciones directamente
+            List<NotificacionesDoctor> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdDoctor = IdDoctor }).ToList();
+
+            return notificaciones;
+        }
+    }
+
+    public static List<NotificacionesPaciente> BuscarNotificacionesPorPaciente(int IdPaciente)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para obtener todas las notificaciones asociadas al IdPaciente
+            string sqlNotificaciones = "SELECT * FROM NotificacionesPacientes WHERE IdPaciente = @pIdPaciente";
+            
+            // Ejecutar la consulta y obtener las notificaciones directamente
+            List<NotificacionesPaciente> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdPaciente = IdPaciente }).ToList();
+
+            return notificaciones;
+        }
+    }
+    public static List<NotificacionesFarmacia> BuscarNotificacionesPorFarmacia(int IdFarmacia)
+    {
+        using (SqlConnection conn = new SqlConnection(_ConnectionString))
+        {
+            conn.Open();
+
+            // Consulta para obtener todas las notificaciones asociadas al IdFarmacia
+            string sqlNotificaciones = "SELECT * FROM NotificacionesFarmaciaes WHERE IdFarmacia = @pIdFarmacia";
+            
+            // Ejecutar la consulta y obtener las notificaciones directamente
+            List<NotificacionesFarmacia> notificaciones = conn.Query<Receta>(sqlNotificaciones, new { pIdFarmacia = IdFarmacia }).ToList();
+
+            return notificaciones;
+        }
+    }
 }

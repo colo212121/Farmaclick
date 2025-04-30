@@ -1,115 +1,115 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginDoc.css",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginDoc.css",
       "PackagePath": "staticwebassets\\css\\loginDoc.css"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginPac.css",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginPac.css",
       "PackagePath": "staticwebassets\\css\\loginPac.css"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginfarma.css",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginfarma.css",
       "PackagePath": "staticwebassets\\css\\loginfarma.css"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\fondo.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\fondo.png",
       "PackagePath": "staticwebassets\\img\\fondo.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imago.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imago.png",
       "PackagePath": "staticwebassets\\img\\imago.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imagotipo.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imagotipo.png",
       "PackagePath": "staticwebassets\\img\\imagotipo.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio doc.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio doc.png",
       "PackagePath": "staticwebassets\\img\\inicio doc.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio farm.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio farm.png",
       "PackagePath": "staticwebassets\\img\\inicio farm.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio pac.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio pac.png",
       "PackagePath": "staticwebassets\\img\\inicio pac.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 1.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 1.png",
       "PackagePath": "staticwebassets\\img\\medicamenmto 1.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 2.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 2.png",
       "PackagePath": "staticwebassets\\img\\medicamenmto 2.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamento 3.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamento 3.png",
       "PackagePath": "staticwebassets\\img\\medicamento 3.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\promos.png",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\promos.png",
       "PackagePath": "staticwebassets\\img\\promos.png"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

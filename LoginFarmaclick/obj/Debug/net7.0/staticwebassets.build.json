@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VOFSHknRyctZ8P/yD2VsBvsQIGLXg2Jsjqj8qwjm69w=",
+  "Hash": "/D7N4JShirZAbFHsc/Tj+h2CT+xBQozN+vIO44LFcEc=",
   "Source": "LoginFarmaclick",
   "BasePath": "_content/LoginFarmaclick",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LoginFarmaclick\\wwwroot",
       "Source": "LoginFarmaclick",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginDoc.css",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginDoc.css",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "css/loginDoc.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\css\\loginDoc.css"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginfarma.css",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginfarma.css",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "css/loginfarma.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\loginfarma.css"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginPac.css",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\loginPac.css",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "css/loginPac.css",
       "AssetKind": "All",
@@ -74,10 +74,67 @@
       "OriginalItemSpec": "wwwroot\\css\\loginPac.css"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\regisDoc.css",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "css/regisDoc.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\regisDoc.css"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\regisFarma.css",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "css/regisFarma.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\regisFarma.css"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\regisPac.css",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "css/regisPac.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\regisPac.css"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\css\\site.css",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -93,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\favicon.ico",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -112,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\fondo.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\fondo.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/fondo.png",
       "AssetKind": "All",
@@ -131,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\img\\fondo.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imago.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imago.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/imago.png",
       "AssetKind": "All",
@@ -150,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\img\\imago.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imagotipo.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imagotipo.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/imagotipo.png",
       "AssetKind": "All",
@@ -169,10 +226,67 @@
       "OriginalItemSpec": "wwwroot\\img\\imagotipo.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio doc.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imgLoginDoctor.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "img/imgLoginDoctor.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\imgLoginDoctor.png"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imgLoginFamacia.png",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "img/imgLoginFamacia.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\imgLoginFamacia.png"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\imgLoginPaciente.png",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "BasePath": "_content/LoginFarmaclick",
+      "RelativePath": "img/imgLoginPaciente.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\imgLoginPaciente.png"
+    },
+    {
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio doc.png",
+      "SourceId": "LoginFarmaclick",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/inicio doc.png",
       "AssetKind": "All",
@@ -188,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inicio doc.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio farm.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio farm.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/inicio farm.png",
       "AssetKind": "All",
@@ -207,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inicio farm.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio pac.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\inicio pac.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/inicio pac.png",
       "AssetKind": "All",
@@ -226,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\inicio pac.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 1.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 1.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/medicamenmto 1.png",
       "AssetKind": "All",
@@ -245,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\img\\medicamenmto 1.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 2.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamenmto 2.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/medicamenmto 2.png",
       "AssetKind": "All",
@@ -264,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\img\\medicamenmto 2.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamento 3.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\medicamento 3.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/medicamento 3.png",
       "AssetKind": "All",
@@ -283,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\img\\medicamento 3.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\promos.png",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\img\\promos.png",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "img/promos.png",
       "AssetKind": "All",
@@ -302,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\img\\promos.png"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\js\\site.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -321,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -340,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -359,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -378,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -397,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -416,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -435,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -454,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -473,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -492,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -511,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -530,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "LoginFarmaclick",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48387263\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47873291\\Desktop\\Farmaclick\\LoginFarmaclick\\wwwroot\\",
       "BasePath": "_content/LoginFarmaclick",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",

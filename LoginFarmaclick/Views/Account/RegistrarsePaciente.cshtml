@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarme</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/regisPac.css" asp-append-version="true" />
 </head>
 <body>
     <div class="container mt-5">
         <div class= "Volver">
+        <img src="~/img/imgLoginPaciente.png" class="logo">
         <a class="btn btn-warning" href='@Url.Action("index", "Home")'>Volver</a>
         </div>
         <img src="~/img/imago.png" class="logo">
         <h1>Registrarme</h1>
         <form action='@Url.Action("GuardarPaciente", "Account")' method="post" onsubmit="return validarFormulario()">
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="Contraseña">Contraseña</label>
                 <input type="password" class="form-control" id="Contraseña" name="Contraseña" required>
                 <small id="passwordHelp" class="form-text text-muted">
                     La contraseña debe tener al menos 8 caracteres, una letra mayúscula y un carácter especial.
                 </small>
             </div>
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="Nombre">Nombre</label>
                 <input type="text" class="form-control" id="Nombre" name="Nombre" required>
             </div>
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="Apellido">Apellido</label>
                 <input type="text" class="form-control" id="Apellido" name="Apellido" required>
             </div>
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="DNI">DNI</label>
                 <input type="text" class="form-control" id="DNI" name="DNI" required>
             </div>
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="Email">Email</label>
                 <input type="email" class="form-control" id="Email" name="Email" required>
             </div>
-            <div class="form-group">
+            <div class="form-pac">
                 <label for="Telefono">Telefono</label>
                 <input type="text" class="form-control" id="Telefono" name="Telefono" required>
             </div>
